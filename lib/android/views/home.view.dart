@@ -24,6 +24,24 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
+      body: ListView(
+        children: [
+          ListTile(
+            leading: Image.network(
+              "http://images6.fanpop.com/image/photos/39900000/IMG-6250-PNG-kion-39961687-1024-577.png",
+            ),
+            title: const Text("Thiago"),
+            subtitle: const Text("27 9 9999-0000"),
+            trailing: TextButton(
+              onPressed: () {},
+              child: Icon(
+                Icons.chat,
+                color: Theme.of(context).primaryColor ,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
