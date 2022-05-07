@@ -1,3 +1,4 @@
+import 'package:contact_app/android/views/details.view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -27,20 +28,42 @@ class HomeView extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
-            leading: Image.network(
-              "http://images6.fanpop.com/image/photos/39900000/IMG-6250-PNG-kion-39961687-1024-577.png",
+            leading: Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                // color: Colors.red,
+                borderRadius: BorderRadius.circular(48),
+                image: const DecorationImage(
+                  image: NetworkImage(
+                    "http://images6.fanpop.com/image/photos/39900000/IMG-6250-PNG-kion-39961687-1024-577.png",
+                  ),
+                ),
+              ),
             ),
             title: const Text("Thiago"),
             subtitle: const Text("27 9 9999-0000"),
             trailing: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DetailsView(),
+                  ),
+                );
+              },
               child: Icon(
                 Icons.chat,
-                color: Theme.of(context).primaryColor ,
+                color: Theme.of(context).primaryColor,
               ),
             ),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Theme.of(context).primaryColor,
+        child: const Icon(Icons.add),
       ),
     );
   }

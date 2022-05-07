@@ -8,11 +8,18 @@ ThemeData androidTheme() {
   return ThemeData(
     brightness: brightness,
     textTheme: const TextTheme(
-      bodyText2: TextStyle(fontFamily: "Poppings"),
+      bodyText2: TextStyle(
+        fontFamily: "Poppings",
+        color: Colors.black,
+      ),
       bodyText1: TextStyle(
         fontFamily: "Poppins",
+        color: Colors.black,
       ),
-      button: TextStyle(fontFamily: "Poppins"),
+      button: TextStyle(
+        fontFamily: "Poppins",
+        color: Colors.black,
+      ),
     ),
     primaryColor: primaryColor,
     colorScheme: ColorScheme?.fromSwatch().copyWith(
