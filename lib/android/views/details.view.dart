@@ -1,4 +1,6 @@
 import 'package:contact_app/android/styles.dart';
+import 'package:contact_app/android/views/editor-contact.view.dart';
+import 'package:contact_app/models/contact.model.dart';
 import 'package:flutter/material.dart';
 
 class DetailsView extends StatelessWidget {
@@ -146,7 +148,21 @@ class DetailsView extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => EditorContactView(
+                model: ContactModel(
+                  id: "1",
+                  name: "Sinon",
+                  email: "email@mail.com",
+                  phone: "11 9999-8888",
+                ),
+              ),
+            ),
+          );
+        },
         backgroundColor: Theme.of(context).primaryColor,
         child: const Icon(
           Icons.edit,
