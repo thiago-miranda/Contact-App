@@ -1,5 +1,5 @@
+import 'package:contact_app/ios/views/home.view.dart';
 import 'package:contact_app/ios/styles.dart';
-import 'package:contact_app/ios/views/splash.view.dart';
 import 'package:flutter/cupertino.dart';
 
 class IOSApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class IOSApp extends StatelessWidget {
       title: 'Contacts',
       debugShowCheckedModeBanner: false,
       theme: iosTheme(),
-      home: const SplashView(),
+      home: const HomeView(),
     );
   }
 }
