@@ -1,3 +1,4 @@
+import 'package:contact_app/ios/views/address.view.dart';
 import 'package:contact_app/ios/views/editor-contact.view.dart';
 import 'package:contact_app/ios/styles.dart';
 import 'package:contact_app/models/contact.model.dart';
@@ -149,7 +150,14 @@ class DetailsView extends StatelessWidget {
                           child: const Icon(
                             CupertinoIcons.location,
                           ),
-                          onPressed: () {})
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (context) => const AddressView(),
+                              ),
+                            );
+                          })
                     ],
                   ),
                 ),
