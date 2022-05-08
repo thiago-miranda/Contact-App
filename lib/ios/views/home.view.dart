@@ -1,4 +1,5 @@
 import 'package:contact_app/ios/styles.dart';
+import 'package:contact_app/ios/views/details.view.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeView extends StatelessWidget {
@@ -82,7 +83,14 @@ class HomeView extends StatelessWidget {
                                 CupertinoIcons.person,
                                 color: primaryColor,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    builder: (context) => const DetailsView(),
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),
