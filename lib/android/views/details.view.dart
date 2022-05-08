@@ -1,4 +1,5 @@
 import 'package:contact_app/android/styles.dart';
+import 'package:contact_app/android/views/address.view.dart';
 import 'package:contact_app/android/views/editor-contact.view.dart';
 import 'package:contact_app/models/contact.model.dart';
 import 'package:flutter/material.dart';
@@ -139,7 +140,14 @@ class DetailsView extends StatelessWidget {
             ),
             isThreeLine: true,
             trailing: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AddressView(),
+                  ),
+                );
+              },
               child: const Icon(
                 Icons.pin_drop,
               ),
